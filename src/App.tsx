@@ -29,8 +29,18 @@ function App() {
 
   if (userError) {
     return (
-      <div className="min-h-screen bg-gh-bg text-gh-text flex items-center justify-center">
-        <p>Failed to load profile. Please check your GitHub token.</p>
+      <div className="min-h-screen bg-gh-bg text-gh-text flex flex-col items-center justify-center p-6 text-center">
+        <p className="text-lg mb-4">Failed to load profile.</p>
+        <p className="text-gh-muted text-sm mb-6">
+          GitHub API might be rate-limited or temporarily unavailable. Please refresh to try again.
+        </p>
+        <button
+          type="button"
+          onClick={() => window.location.reload()}
+          className="px-4 py-2 bg-gh-btn border border-gh-border rounded-md text-sm hover:border-gh-muted transition-colors"
+        >
+          Retry
+        </button>
       </div>
     );
   }
