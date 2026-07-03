@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gh-bg: #0d1117;
+  --gh-border: #30363d;
+  --gh-text: #c9d1d9;
+  --gh-muted: #8b949e;
+  --gh-link: #58a6ff;
+  --gh-btn: #21262d;
+  --gh-accent: #238636;
+}
+
+body {
+  @apply bg-gh-bg text-gh-text font-sans antialiased;
+}
